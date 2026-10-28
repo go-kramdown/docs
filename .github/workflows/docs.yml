@@ -147,7 +147,7 @@ jobs:
       # the root redirecting to it.
       - name: Publish ${{ needs.build.outputs.version }}
         run: >-
-          go run github.com/go-fleettools/fleettools/cmd/pagespublish@v0.42.0
+          go run github.com/go-fleettools/fleettools/cmd/pagespublish@v0.26.0
           "${{ needs.build.outputs.version }}" site gh-pages
 
       - name: Push gh-pages
