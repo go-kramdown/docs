@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -444,6 +444,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#task-lists-gfm-dialect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task lists (GFM dialect)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -508,6 +519,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#task-lists-gfm-dialect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task lists (GFM dialect)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -541,6 +563,14 @@
 <div class="highlight"><pre><span></span><code>go<span class="w"> </span>get<span class="w"> </span>github.com/go-kramdown/kramdown
 </code></pre></div>
 <p>Requires Go 1.26.4 or newer. <code>CGO_ENABLED=0</code>.</p>
+<h2 id="task-lists-gfm-dialect">Task lists (GFM dialect)</h2>
+<p>Task lists (<code>- [x] done</code>, <code>- [ ] todo</code>) are not part of kramdown's own syntax: the
+reference gem, and go-kramdown by default, print <code>[x]</code> literally. Select the GFM
+dialect (<code>kramdown-parser-gfm</code>) to render checkboxes, byte-identical to the gem:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">o</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">kramdown</span><span class="p">.</span><span class="nx">DefaultOptions</span><span class="p">()</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">Input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"GFM"</span>
+<span class="nx">html</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">kramdown</span><span class="p">.</span><span class="nx">ToHTML</span><span class="p">(</span><span class="s">"- [x] done\n- [ ] todo\n"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">o</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="links">Links</h2>
 <ul>
 <li>Source: <a href="https://github.com/go-kramdown/kramdown">https://github.com/go-kramdown/kramdown</a></li>
@@ -605,10 +635,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
